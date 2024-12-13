@@ -6,15 +6,18 @@
   padding: 0.9rem 1.5rem 1.1rem;
   // stylelint-disable-next-line primer/typography
   font-size: 1rem;
+  // stylelint-disable-next-line primer/typography
   font-weight: $font-weight-bold;
+  // stylelint-disable-next-line primer/typography
   line-height: 1;
-  color: var(--color-canvas-default);
+  // stylelint-disable-next-line primer/colors
+  color: var(--bgColor-default, var(--color-canvas-default));
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%), // stylelint-disable-line primer/colors
     var(--color-mktg-btn-bg) !important;
   border: 0;
   // stylelint-disable-next-line primer/borders
@@ -41,6 +44,7 @@
 
   &:hover {
     text-decoration: none;
+    // stylelint-disable-next-line primer/box-shadow
     box-shadow: var(--color-mktg-btn-shadow-hover) !important;
   }
 
@@ -55,7 +59,7 @@
 
   // fallback :focus state
   &:focus {
-    @include focusOutline(2px, var(--color-accent-fg));
+    @include focusOutline(2px, var(--focus-outlineColor, var(--color-accent-fg)));
 
     // remove fallback :focus if :focus-visible is supported
     &:not(:focus-visible) {
@@ -66,7 +70,7 @@
 
   // default focus state
   &:focus-visible {
-    @include focusOutline(2px, var(--color-accent-fg));
+    @include focusOutline(2px, var(--focus-outlineColor, var(--color-accent-fg)));
   }
 
   &:active {
@@ -84,8 +88,9 @@
 }
 
 .btn-muted-mktg {
-  color: var(--color-fg-default) !important;
+  color: var(--fgColor-default, var(--color-fg-default)) !important;
   background: none !important;
+  // stylelint-disable-next-line primer/box-shadow
   box-shadow: var(--color-mktg-btn-shadow-outline);
 
   &::before {
@@ -93,22 +98,23 @@
   }
 
   &:hover {
+    // stylelint-disable-next-line primer/box-shadow
     box-shadow: var(--color-mktg-btn-shadow-hover-muted) !important;
   }
 
   &:active {
     // stylelint-disable-next-line primer/box-shadow
-    box-shadow: var(--color-fg-default) 0 0 0 3px inset !important;
+    box-shadow: var(--fgColor-default, var(--color-fg-default)) 0 0 0 3px inset !important;
   }
 
   &:disabled {
     // stylelint-disable-next-line primer/box-shadow
-    box-shadow: var(--color-fg-subtle) 0 0 0 1px inset !important;
+    box-shadow: var(--fgColor-muted, var(--color-fg-subtle)) 0 0 0 1px inset !important;
   }
 }
 
 .btn-subtle-mktg {
-  color: var(--color-fg-default) !important;
+  color: var(--fgColor-default, var(--color-fg-default)) !important;
   background: none !important;
   box-shadow: none !important;
 
@@ -117,6 +123,7 @@
   }
 
   &:hover {
+    // stylelint-disable-next-line primer/box-shadow
     box-shadow: var(--color-mktg-btn-shadow-hover-muted) !important;
   }
 }
@@ -134,7 +141,7 @@
 
   // fallback :focus state
   &:focus {
-    @include focusOutline(2px, var(--color-accent-fg));
+    @include focusOutline(2px, var(--focus-outlineColor, var(--color-accent-fg)));
 
     // remove fallback :focus if :focus-visible is supported
     &:not(:focus-visible) {
@@ -145,7 +152,7 @@
 
   // default focus state
   &:focus-visible {
-    @include focusOutline(2px, var(--color-accent-fg));
+    @include focusOutline(2px, var(--focus-outlineColor, var(--color-accent-fg)));
   }
 }
 

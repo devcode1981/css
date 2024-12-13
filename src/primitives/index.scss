@@ -1,9 +1,8 @@
-@import '@primer/primitives/tokens-v2-private/css/tokens/base/size/size.css';
-@import '@primer/primitives/tokens-v2-private/css/tokens/base/typography/typography.css';
-@import '@primer/primitives/tokens-v2-private/css/tokens/functional/size/border.css';
-@import '@primer/primitives/tokens-v2-private/css/tokens/functional/size/breakpoints.css';
-@import '@primer/primitives/tokens-v2-private/css/tokens/functional/size/size-coarse.css';
-@import '@primer/primitives/tokens-v2-private/css/tokens/functional/size/size-fine.css';
-@import '@primer/primitives/tokens-v2-private/css/tokens/functional/size/size.css';
-@import '@primer/primitives/tokens-v2-private/css/tokens/functional/size/viewport.css';
-@import '@primer/primitives/tokens-v2-private/css/tokens/functional/typography/typography.css';
+@import '@primer/primitives/dist/css/base/size/size';
+@import '@primer/primitives/dist/css/base/typography/typography';
+@import '@primer/primitives/dist/css/functional/size/border';
+@import '@primer/primitives/dist/css/functional/size/breakpoints';
+@import '@primer/primitives/dist/css/functional/size/size';
+@import '@primer/primitives/dist/css/functional/size/viewport';
+@import '@primer/primitives/dist/css/functional/typography/typography';
+@import './temp-typography-tokens.scss';
